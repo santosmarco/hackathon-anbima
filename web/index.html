@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>1º Hackathon Anbima</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Rubik&display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="jc.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .button {
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        cursor: pointer;
+      }
+
+      .button1 {
+        background-color: white;
+        color: black;
+        border: 2px;
+        width: 300px;
+        height: 100px;
+        border-radius: 20px 20px;
+      }
+
+      .button2 {
+        background-color: white;
+        color: black;
+        border: 2px;
+        width: 300px;
+        height: 100px;
+        border-radius: 20px 20px;
+      }
+
+      .button3 {
+        background-color: white;
+        color: black;
+        border: 2px;
+        width: 300px;
+        height: 100px;
+        border-radius: 20px 20px;
+      }
+
+      .button4 {
+        background-color: white;
+        color: black;
+        border: 2px;
+        width: 300px;
+        height: 100px;
+        border-radius: 20px 20px;
+      }
+
+      .button5 {
+        background-color: red;
+        color: #454b66;
+        border: 2px;
+        width: 950px;
+        height: 180px;
+        border-radius: 20px 20px;
+        box-shadow: 0 3px 15px 1px rgba(55, 58, 64, 0.14);
+        background-image: linear-gradient(
+          90deg,
+          red 0px,
+          red 70px,
+          white 70px,
+          white 950px
+        );
+      }
+
+      .button5 p {
+        margin-left: -880px;
+        font-size: 25px;
+        padding-top: 10px;
+        margin-top: -55px;
+        color: white;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+
+      .button5 a {
+        margin-left: -320px;
+      }
+
+      .button6 {
+        background-color: orange;
+        color: #454b66;
+        border: 2px;
+        width: 950px;
+        height: 180px;
+        border-radius: 20px 20px;
+        box-shadow: 0 3px 15px 1px rgba(55, 58, 64, 0.14);
+        background-image: linear-gradient(
+          90deg,
+          orange 0px,
+          orange 70px,
+          white 70px,
+          white 950px
+        );
+      }
+
+      .button6 p {
+        margin-left: -880px;
+        font-size: 25px;
+        margin-top: -30px;
+        padding-top: -10px;
+        color: white;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+
+      .button6 a {
+        margin-left: -260px;
+      }
+
+      .button7 {
+        background-color: blue;
+        color: #454b66;
+        border: 2px;
+        width: 950px;
+        height: 180px;
+        border-radius: 20px 20px;
+        box-shadow: 0 3px 15px 1px rgba(55, 58, 64, 0.14);
+        background-image: linear-gradient(
+          90deg,
+          blue 0px,
+          blue 70px,
+          white 70px,
+          white 950px
+        );
+      }
+
+      .button7 p {
+        margin-left: -880px;
+        font-size: 25px;
+        padding-top: 1px;
+        margin-top: -45px;
+        color: white;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+
+      .button7 a {
+        margin-left: -385px;
+      }
+
+      .button8 {
+        background-color: green;
+        color: #454b66;
+        border: 2px;
+        width: 950px;
+        font-size: 20px;
+        height: 180px;
+        border-radius: 20px 20px;
+        box-shadow: 0 3px 15px 1px rgba(55, 58, 64, 0.14);
+        background-image: linear-gradient(
+          90deg,
+          green 0px,
+          green 70px,
+          white 70px,
+          white 950px
+        );
+      }
+
+      .button8 p {
+        margin-left: -880px;
+        font-size: 25px;
+        padding-top: -100px;
+        margin-top: -45px;
+        color: white;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+
+      .button8 a {
+        margin-left: -310px;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        font-family: Rubik, sans-serif;
+      }
+
+      header {
+        background-color: white;
+        padding: 1px;
+        text-align: center;
+        font-size: 20px;
+        color: black;
+      }
+
+      button a {
+        font-size: 50px;
+        margin-left: -260px;
+      }
+
+      nav {
+        float: left;
+        width: 25%;
+        height: 860px;
+        background: #454b66;
+        padding: 20px;
+        font-size: 20px;
+        color: white;
+      }
+
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      article {
+        float: left;
+        padding: 20px;
+        width: 70%;
+        height: 800px;
+      }
+
+      section {
+        display: flex;
+      }
+
+      section:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      side-bar {
+        width: 30%;
+        height: 100vh;
+        background-color: #454b66;
+      }
+      profile {
+        display: flex;
+      }
+      .user-logo {
+        width: 100px;
+        height: 100px;
+        margin-left: 20px;
+        margin-top: 20px;
+      }
+
+      edit-profile-link {
+        color: white;
+        font-size: 20px;
+      }
+
+      a {
+        color: #d6e3f8;
+        text-decoration: none;
+      }
+
+      #side-bar {
+        display: flex;
+        flex-direction: column;
+        background-color: #454b66;
+        width: 25vw;
+        height: 100vh;
+      }
+      #profile {
+        display: flex;
+        flex-direction: row;
+      }
+      #user-logo {
+        width: 25%;
+        height: 25%;
+        padding-left: 5%;
+        padding-top: 5%;
+      }
+      #user-info {
+        padding-left: 5%;
+        padding-top: 5%;
+        font-size: 23px;
+      }
+      #data-fonts-title {
+        padding-left: 5%;
+        padding-top: 20px;
+        font-size: 30px;
+        color: white;
+      }
+      #data-fonts {
+        display: flex;
+        flex-direction: column;
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-top: -3%;
+      }
+      .data-font {
+        display: flex;
+        flex-direction: row;
+        background-color: white;
+        height: 100px;
+        border-radius: 30px;
+        margin-bottom: 20px;
+      }
+      .data-font-type {
+        width: 80px;
+        height: 80px;
+        background-color: black;
+        border-radius: 50%;
+        margin-top: 10px;
+        margin-left: 10px;
+      }
+      .data-font-type-text {
+        color: white;
+        font-size: 20px;
+        margin-left: 20px;
+        margin-top: 28px;
+      }
+      .data-font-attributes {
+        display: flex;
+        flex-direction: column;
+        padding-left: 15px;
+        font-size: 18px;
+      }
+      .data-font-tables {
+        font-size: 15px;
+      }
+      .data-font-entries {
+        font-size: 15px;
+        margin-left: 20px;
+      }
+      #new-data-font-buttons {
+        display: flex;
+        flex-direction: column;
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-top: 3%;
+      }
+      .new-data-font {
+        width: auto;
+        text-align: center;
+        border-radius: 30px;
+        background-color: black;
+        color: white;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        margin-bottom: 15px;
+      }
+      #allowed-formats {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div id="side-bar">
+        <div id="profile">
+          <img
+            id="user-logo"
+            src="./img/votorantim-logo.png"
+            alt="Votorantim logo"
+          />
+          <div id="user-info">
+            <p>
+              <span id="user-name" style="color:white;"
+                ><strong>Votorantim Asset</strong></span
+              ><br />
+              <span id="edit-profile-link"><a href="">Editar Perfil</a></span>
+            </p>
+          </div>
+        </div>
+        <p id="data-fonts-title">
+          Suas Fontes de Dados
+        </p>
+        <div id="data-fonts">
+          <div class="data-font">
+            <div class="data-font-type">
+              <p class="data-font-type-text">
+                AWS
+              </p>
+            </div>
+            <div class="data-font-attributes">
+              <p>
+                <span class="data-font-name"
+                  >votorantimClients<br /><br
+                /></span>
+                <span class="data-font-tables">Tabelas 3</span>
+                <span class="data-font-entries">Entradas 3.450</span>
+              </p>
+            </div>
+          </div>
+          <div class="data-font">
+            <div class="data-font-type">
+              <p class="data-font-type-text">
+                XLS
+              </p>
+            </div>
+            <div class="data-font-attributes">
+              <p>
+                <span class="data-font-name"
+                  >votorantimFunds.xls<br /><br
+                /></span>
+                <span class="data-font-tables">Tabelas 1</span>
+                <span class="data-font-entries">Entradas 19</span>
+              </p>
+            </div>
+          </div>
+          <div id="btn-csv" class="data-font">
+            <div class="data-font-type">
+              <p class="data-font-type-text">
+                CSV
+              </p>
+            </div>
+            <div class="data-font-attributes">
+              <p>
+                <span class="data-font-name"
+                  >votorantimStocks.csv<br /><br
+                /></span>
+                <span class="data-font-tables">Tabelas 9</span>
+                <span class="data-font-entries">Entradas 17.380</span>
+              </p>
+            </div>
+          </div>
+          <div class="data-font">
+            <div class="data-font-type">
+              <p class="data-font-type-text">
+                XML
+              </p>
+            </div>
+            <div class="data-font-attributes">
+              <p>
+                <span class="data-font-name"
+                  >votorantimPartners.xml<br /><br
+                /></span>
+                <span class="data-font-tables">Tabelas 1</span>
+                <span class="data-font-entries">Entradas 15</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="new-data-font-buttons">
+          <div class="new-data-font">
+            Nova Fonte de Dados Externa
+          </div>
+          <div class="new-data-font">
+            Nova Fonte de Dados Interna
+          </div>
+          <div id="allowed-formats">
+            <strong>Formatos permitidos:</strong><br />
+            .sql, .xls, .csv, .xml, .json, .txt, .pdf<br />e
+            <a href="">outros</a>
+          </div>
+        </div>
+      </div>
+
+      <article>
+        <div style="font-size: 30px">
+          <p style="margin-left: 7px">
+            <strong style="color: #454b66">Fundos de Investimentos</strong>
+          </p>
+        </div>
+        <button class="button button5">
+          <div
+            style="margin-left: -670px; font-size: 30px; margin-top: 15px;color: red"
+          >
+            <strong>Fraude</strong>
+          </div>
+          <div>
+            <img
+              style="margin-left: 800px;margin-top: -35px"
+              src="./img/ligar.png"
+              height="34"
+              width="60"
+            /><br />
+            <div style="margin-left: 1285px;margin-top: 45px">
+              <p style="color: grey; font-size: 15px" ;>auto-envio</p>
+            </div>
+          </div>
+          <a>FIA Top Multi Estilos</a>
+          <p><strong>1</strong></p>
+        </button>
+        <br />
+        <button class="button button6">
+          <div
+            style="margin-left: -410px; font-size: 30px; margin-top: 20px;color:orange"
+          >
+            <strong>Inconsistência de Dados</strong>
+          </div>
+          <div>
+            <img
+              style="margin-left: 800px;margin-top: -35px"
+              src="./img/desligar.png"
+              height="34"
+              width="60"
+            /><br />
+            <div style="margin-left: 1285px;margin-top: 25px">
+              <p style="color: grey; font-size: 15px" ;>auto-envio</p>
+            </div>
+          </div>
+          <a>FIC FIDC Vot Absolute</a>
+          <p><strong>2</strong></p>
+        </button>
+        <br />
+        <button class="button button7">
+          <div
+            style="margin-left: -460px; font-size: 30px; margin-top: 20px; color: blue"
+          >
+            <strong> Erro de Configuração</strong>
+          </div>
+          <div>
+            <img
+              style="margin-left: 800px;margin-top: -35px"
+              src="./img/ligar.png"
+              height="34"
+              width="60"
+            /><br />
+            <div style="margin-left: 1285px;margin-top: 40px">
+              <p style="color: grey; font-size: 15px" ;>auto-envio</p>
+            </div>
+          </div>
+          <a>FII Green Towers</a>
+          <p><strong>3</strong></p>
+        </button>
+        <br />
+        <button class="button button8">
+          <div
+            style="margin-left: -640px; font-size: 30px; margin-top: 15px;color: green"
+          >
+            <strong>Sucesso</strong>
+          </div>
+          <div>
+            <img
+              style="margin-left: 800px;margin-top: -35px"
+              src="./img/ligar.png"
+              height="34"
+              width="60"
+            /><br />
+            <div style="margin-left: 1285px;margin-top: 45px">
+              <p style="color: grey; font-size: 15px" ;>auto-envio</p>
+            </div>
+          </div>
+          <a>FIDC Cartepillar Sub</a>
+          <p><strong>4</strong></p>
+        </button>
+        <br />
+      </article>
+    </section>
+    <!-- Trigger/Open The Modal -->
+    <button id="myBtn">Open Modal</button>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Selecione o arquivo</p>
+        <input type="file" id="input" onchange="handleFiles(this.files)" />
+        <button id="btn-send">Enviar</button>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
